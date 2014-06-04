@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Email:
+  = @user.email
+%p
+  %b Country:
+  = @user.country
+%p
+  %b Cost:
+  = number_to_currency @user.cost
+%p
+  %b Use:
+  = @user.use
+%p
+  %b Comments:
+  = @user.comments
+
+= link_to 'Edit', edit_user_path(@user)
+\|
+= link_to 'Back', users_path
