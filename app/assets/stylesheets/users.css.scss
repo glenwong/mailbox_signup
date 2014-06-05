@@ -7,10 +7,17 @@
   padding: 15px;
 }
 
-.pad-top {
+.pad {
   padding-top: 50px;
+  padding-bottom: 50px;
+  background: #d3e0e6;
 }
 
 main {
   background: #d3e0e6;
+}
+
+#error_explanation {
+  width: 100%;
+  border-radius: 5px;
 }
