@@ -1,25 +1,26 @@
 = form_for @user do |f|
   - if @user.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
+      %h2= "Please correct the #{pluralize(@user.errors.count, "error")} below and try again:"
       %ul
         - @user.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :country
-    = f.country_select :country, ["United States"]
-  .field
-    = f.label :cost
-    = f.text_field :cost
-  .field
-    = f.label :use
-    = f.text_area :use
-  .field
-    = f.label :comments
-    = f.text_area :comments
+  .field.form-group
+    = f.label "E-Mail"
+    = f.email_field :email, class: "form-control", placeholder: "name@example.com"
+  .field.form-group
+    = f.label "Country"
+    = f.country_select :country, ["United States"], class: "form-control"
+  .field.form-group
+    = f.label "How much would you be willing to pay for this service? ($/month)"
+    = f.text_field :cost, class: "form-control", placeholder: "0"
+  .field.form-group
+    = f.label "How do you envision yourself using this service?"
+    = f.text_area :use, class: "form-control", rows: 5, placeholder: "Elaborate here..."
+  .field.form-group
+    = f.label "Any additional comments or suggestions?"
+    = f.text_area :comments, class: "form-control", rows: 5, placeholder: "Please let us know your thoughts..."
   .actions
-    = f.submit 'Save'
+    = f.submit 'Submit', class: "btn btn-primary pull-right"
+  .clearfix

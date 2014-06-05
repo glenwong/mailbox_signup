@@ -14,6 +14,7 @@ gem 'bootstrap-sass'
 gem 'haml-rails'
 gem 'puma'
 gem 'country_select'
+gem 'email_validator'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
@@ -32,4 +33,8 @@ group :test do
   gem 'faker'
   gem 'launchy'
   gem 'selenium-webdriver'
+end
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
 end
