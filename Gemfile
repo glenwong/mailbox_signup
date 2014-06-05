@@ -11,7 +11,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'haml-rails'
-gem 'puma'
+gem 'unicorn'
 gem 'country_select'
 gem 'email_validator'
 group :development do
