@@ -1,7 +1,10 @@
 .row.pad-top
   .col-md-6.col-md-offset-3#main-rect
     =image_tag "mailsafe-new.png", id: 'logo'
-    = render 'form'
+    - if @done
+      =render 'done'
+    - else 
+      =render 'form'
 :javascript
   $(document).ready(function() {
     $("#main-rect").hide().fadeIn('slow');
