@@ -12,9 +12,10 @@
   .field.form-group
     = f.label "Country"
     = f.country_select :country, ["United States"], class: "form-control"
-  .field.form-group
-    = f.label "How much would you be willing to pay for this service? ($/month)"
-    = f.text_field :cost, class: "form-control", placeholder: "0"
+  -#
+    .field.form-group
+      = f.label "How much would you be willing to pay for this service? ($/month)"
+      = f.text_field :cost, class: "form-control", placeholder: "0"
   .field.form-group
     = f.label "How do you envision yourself using this service?"
     = f.text_area :use, class: "form-control", rows: 5, placeholder: "Elaborate here..."
